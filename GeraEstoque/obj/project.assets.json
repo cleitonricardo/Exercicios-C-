@@ -13,18 +13,22 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\spagnol\\Desktop\\NEW\\GeraEstoque\\GeraEstoque.csproj",
+      "projectUniqueName": "C:\\Users\\spagnol\\Desktop\\Projetos\\GeraEstoque\\GeraEstoque.csproj",
       "projectName": "GeraEstoque",
-      "projectPath": "C:\\Users\\spagnol\\Desktop\\NEW\\GeraEstoque\\GeraEstoque.csproj",
+      "projectPath": "C:\\Users\\spagnol\\Desktop\\Projetos\\GeraEstoque\\GeraEstoque.csproj",
       "packagesPath": "C:\\Users\\spagnol\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\spagnol\\Desktop\\NEW\\GeraEstoque\\obj\\",
+      "outputPath": "C:\\Users\\spagnol\\Desktop\\Projetos\\GeraEstoque\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\spagnol\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\spagnol\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
+      },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
@@ -55,7 +59,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

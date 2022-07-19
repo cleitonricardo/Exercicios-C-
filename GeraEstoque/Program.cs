@@ -1,64 +1,61 @@
 ﻿namespace GeraEstoque;
 
-class Program
-{
-    static void Main()
+public class Program
+{   
+    
+    static void Main(string[] args)
     {
-        Menu();
-
-       
+        Program program = new Program();
+        program.Menu();
     }
 
-    static void Menu(){
-        Console.WriteLine("Seja bem vindo ao GeraEstoque 1.0");
-        Console.WriteLine("----------------------------------------");
-        Console.WriteLine("1  Cadastrar produto");
-        Console.WriteLine("2  Consultar produto");
-        Console.WriteLine("3  Modificar produto");
-        Console.WriteLine("4  Excluir produto");
-        Console.WriteLine("0  Sair");
-        Console.WriteLine("Digite a opção:");
-        var option =short.Parse(Console.ReadLine());
-       
-       switch(option)
-       {
-        case 1: CadastrarProduto();break;
-        case 2: {Console.Clear();Environment.Exit(0);break;}
-       }
+    public void Menu()
+    {
+        Program program = new Program();
+        Console.Clear();
+        System.Console.WriteLine("Seja Bem vindo ao GeraEstoque 1.0");
+        System.Console.WriteLine("--------------------------------------");
+        System.Console.WriteLine("1 Cadastrar protuto");
+        System.Console.WriteLine("2 Consultar produto");
+        System.Console.WriteLine("3 Modificar produto");
+        System.Console.WriteLine("4 Excluir produto");
+        System.Console.WriteLine("0 Sair");
+        System.Console.WriteLine($"\nDigite a opção:");
+        string? escolha =Console.ReadLine();
 
+        switch(escolha)
+        {
+            case "1":
+                Console.Clear();
+                program.CadastrarProduto();
+                
+            break;
+           
+        }
     }
-
-    static void CadastrarProduto()
+    public void CadastrarProduto()
+    
     {   
-        Console.Clear();
-        Console.WriteLine("Insira o Nome :");
-        var name =(Console.ReadLine());
-        Console.Clear();
-        Console.WriteLine("Quantidade em Estoque  :");
-        var qtd =(Console.ReadLine());
-        Console.Clear();
-        Console.WriteLine("Valor de compra   :");
-        float valorCompra =float.Parse(Console.ReadLine());
-        Console.Clear();
-        Console.WriteLine("Valor de Venda :");
-        float valorVenda =float.Parse(Console.ReadLine());
-        Console.Clear();
-        Guid id= Guid.NewGuid();
-        Console.WriteLine("Produto cadastrado com sucesso!");
-         Console.WriteLine();
-        Console.WriteLine("ID: {0}",id);
-        Console.WriteLine("Nome: Produto {0}",name);
-        Console.WriteLine("Qtd: {0}",qtd);
-        Console.WriteLine("R$ Compra:R$ {0}",valorCompra);
-        Console.WriteLine("R$ Venda:R$ {0}",valorVenda);
-        Console.WriteLine();
-        Console.WriteLine("Pressione qualquer tecla para retornar ao menu");
-        var tecla =(Console.ReadLine());
-        Console.Clear();
+        Guid g = Guid.NewGuid();
+        System.Console.Write("Insira o nome do Produto :");
+        string? nome=Console.ReadLine();
+        System.Console.Write("Insira a quantidade em estoque do produto: ");
+        int qtd = Convert.ToInt32(Console.ReadLine());
+        System.Console.Write("Insira o valor de compra do produto:R$");
+        double valorCompra=Convert.ToDouble(Console.ReadLine());
+        System.Console.Write("Insira o valor de venda do produto:R$");
+        double valorVenda=Convert.ToDouble(Console.ReadLine());
+
+        System.Console.WriteLine("\nProduto cadastrado com sucesso!");
+        System.Console.WriteLine($"\nID: {g}");
+        System.Console.WriteLine($"Nome: {nome}");
+        System.Console.WriteLine($"Qtd: {qtd}");
+        System.Console.WriteLine($"R$ Compra: R${valorCompra}");
+        System.Console.WriteLine($"R$ Venda: R${valorVenda}");
+
+        System.Console.WriteLine("\n Pressione qualquer tecla para voltar ao Menu Inicial");
+        Console.Read();
         Menu();
-
-
+       
     }
-
-   
 }
